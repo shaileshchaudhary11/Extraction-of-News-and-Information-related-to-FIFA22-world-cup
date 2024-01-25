@@ -1,0 +1,1168 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    CB
+    GARBAGE
+    OB
+
+Grammar
+
+Rule 0     S' -> init
+Rule 1     init -> start
+Rule 2     start -> bskip BEGINTABLE skip OPENTABLE handleRow CLOSETABLE
+Rule 3     bskip -> CONTENT bskip
+Rule 4     bskip -> OPENHREF bskip
+Rule 5     bskip -> CLOSEHREF bskip
+Rule 6     bskip -> OPENDATA bskip
+Rule 7     bskip -> CLOSEDATA bskip
+Rule 8     bskip -> OPENROW bskip
+Rule 9     bskip -> CLOSEROW bskip
+Rule 10    bskip -> OPENHEADER bskip
+Rule 11    bskip -> CLOSEHEADER bskip
+Rule 12    bskip -> OPENABBR bskip
+Rule 13    bskip -> CLOSEABBR bskip
+Rule 14    bskip -> OPENTABLE bskip
+Rule 15    bskip -> CLOSETABLE bskip
+Rule 16    bskip -> <empty>
+Rule 17    handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+Rule 18    handleRow -> OPENROW handleData CLOSEROW handleRow
+Rule 19    handleRow -> <empty>
+Rule 20    handleData -> OPENDATA skip CLOSEDATA OPENDATA skip CLOSEDATA OPENHEADER OPENHREF CONTENT CLOSEHREF skip CLOSEHEADER handleData
+Rule 21    handleData -> OPENDATA skip CLOSEDATA handleData
+Rule 22    handleData -> <empty>
+Rule 23    skip -> CONTENT skip
+Rule 24    skip -> OPENHREF skip
+Rule 25    skip -> CLOSEHREF skip
+Rule 26    skip -> <empty>
+
+Terminals, with rules where they appear
+
+BEGINTABLE           : 2
+CB                   : 
+CLOSEABBR            : 13
+CLOSEDATA            : 7 20 20 21
+CLOSEHEADER          : 11 17 17 17 17 17 17 17 20
+CLOSEHREF            : 5 20 25
+CLOSEROW             : 9 17 18
+CLOSETABLE           : 2 15
+CONTENT              : 3 17 17 17 17 17 17 17 20 23
+GARBAGE              : 
+OB                   : 
+OPENABBR             : 12
+OPENDATA             : 6 20 20 21
+OPENHEADER           : 10 17 17 17 17 17 17 17 20
+OPENHREF             : 4 20 24
+OPENROW              : 8 17 18
+OPENTABLE            : 2 14
+error                : 
+
+Nonterminals, with rules where they appear
+
+bskip                : 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+handleData           : 18 20 21
+handleRow            : 2 17 18
+init                 : 0
+skip                 : 2 17 20 20 20 21 23 24 25
+start                : 1
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . init
+    (1) init -> . start
+    (2) start -> . bskip BEGINTABLE skip OPENTABLE handleRow CLOSETABLE
+    (3) bskip -> . CONTENT bskip
+    (4) bskip -> . OPENHREF bskip
+    (5) bskip -> . CLOSEHREF bskip
+    (6) bskip -> . OPENDATA bskip
+    (7) bskip -> . CLOSEDATA bskip
+    (8) bskip -> . OPENROW bskip
+    (9) bskip -> . CLOSEROW bskip
+    (10) bskip -> . OPENHEADER bskip
+    (11) bskip -> . CLOSEHEADER bskip
+    (12) bskip -> . OPENABBR bskip
+    (13) bskip -> . CLOSEABBR bskip
+    (14) bskip -> . OPENTABLE bskip
+    (15) bskip -> . CLOSETABLE bskip
+    (16) bskip -> .
+
+    CONTENT         shift and go to state 6
+    OPENHREF        shift and go to state 7
+    CLOSEHREF       shift and go to state 8
+    OPENDATA        shift and go to state 9
+    CLOSEDATA       shift and go to state 10
+    OPENROW         shift and go to state 11
+    CLOSEROW        shift and go to state 12
+    OPENHEADER      shift and go to state 13
+    CLOSEHEADER     shift and go to state 14
+    OPENABBR        shift and go to state 15
+    CLOSEABBR       shift and go to state 16
+    OPENTABLE       shift and go to state 4
+    CLOSETABLE      shift and go to state 5
+    BEGINTABLE      reduce using rule 16 (bskip -> .)
+
+    init                           shift and go to state 1
+    start                          shift and go to state 2
+    bskip                          shift and go to state 3
+
+state 1
+
+    (0) S' -> init .
+
+
+
+state 2
+
+    (1) init -> start .
+
+    $end            reduce using rule 1 (init -> start .)
+
+
+state 3
+
+    (2) start -> bskip . BEGINTABLE skip OPENTABLE handleRow CLOSETABLE
+
+    BEGINTABLE      shift and go to state 17
+
+
+state 4
+
+    (14) bskip -> OPENTABLE . bskip
+    (3) bskip -> . CONTENT bskip
+    (4) bskip -> . OPENHREF bskip
+    (5) bskip -> . CLOSEHREF bskip
+    (6) bskip -> . OPENDATA bskip
+    (7) bskip -> . CLOSEDATA bskip
+    (8) bskip -> . OPENROW bskip
+    (9) bskip -> . CLOSEROW bskip
+    (10) bskip -> . OPENHEADER bskip
+    (11) bskip -> . CLOSEHEADER bskip
+    (12) bskip -> . OPENABBR bskip
+    (13) bskip -> . CLOSEABBR bskip
+    (14) bskip -> . OPENTABLE bskip
+    (15) bskip -> . CLOSETABLE bskip
+    (16) bskip -> .
+
+    CONTENT         shift and go to state 6
+    OPENHREF        shift and go to state 7
+    CLOSEHREF       shift and go to state 8
+    OPENDATA        shift and go to state 9
+    CLOSEDATA       shift and go to state 10
+    OPENROW         shift and go to state 11
+    CLOSEROW        shift and go to state 12
+    OPENHEADER      shift and go to state 13
+    CLOSEHEADER     shift and go to state 14
+    OPENABBR        shift and go to state 15
+    CLOSEABBR       shift and go to state 16
+    OPENTABLE       shift and go to state 4
+    CLOSETABLE      shift and go to state 5
+    BEGINTABLE      reduce using rule 16 (bskip -> .)
+
+    bskip                          shift and go to state 18
+
+state 5
+
+    (15) bskip -> CLOSETABLE . bskip
+    (3) bskip -> . CONTENT bskip
+    (4) bskip -> . OPENHREF bskip
+    (5) bskip -> . CLOSEHREF bskip
+    (6) bskip -> . OPENDATA bskip
+    (7) bskip -> . CLOSEDATA bskip
+    (8) bskip -> . OPENROW bskip
+    (9) bskip -> . CLOSEROW bskip
+    (10) bskip -> . OPENHEADER bskip
+    (11) bskip -> . CLOSEHEADER bskip
+    (12) bskip -> . OPENABBR bskip
+    (13) bskip -> . CLOSEABBR bskip
+    (14) bskip -> . OPENTABLE bskip
+    (15) bskip -> . CLOSETABLE bskip
+    (16) bskip -> .
+
+    CONTENT         shift and go to state 6
+    OPENHREF        shift and go to state 7
+    CLOSEHREF       shift and go to state 8
+    OPENDATA        shift and go to state 9
+    CLOSEDATA       shift and go to state 10
+    OPENROW         shift and go to state 11
+    CLOSEROW        shift and go to state 12
+    OPENHEADER      shift and go to state 13
+    CLOSEHEADER     shift and go to state 14
+    OPENABBR        shift and go to state 15
+    CLOSEABBR       shift and go to state 16
+    OPENTABLE       shift and go to state 4
+    CLOSETABLE      shift and go to state 5
+    BEGINTABLE      reduce using rule 16 (bskip -> .)
+
+    bskip                          shift and go to state 19
+
+state 6
+
+    (3) bskip -> CONTENT . bskip
+    (3) bskip -> . CONTENT bskip
+    (4) bskip -> . OPENHREF bskip
+    (5) bskip -> . CLOSEHREF bskip
+    (6) bskip -> . OPENDATA bskip
+    (7) bskip -> . CLOSEDATA bskip
+    (8) bskip -> . OPENROW bskip
+    (9) bskip -> . CLOSEROW bskip
+    (10) bskip -> . OPENHEADER bskip
+    (11) bskip -> . CLOSEHEADER bskip
+    (12) bskip -> . OPENABBR bskip
+    (13) bskip -> . CLOSEABBR bskip
+    (14) bskip -> . OPENTABLE bskip
+    (15) bskip -> . CLOSETABLE bskip
+    (16) bskip -> .
+
+    CONTENT         shift and go to state 6
+    OPENHREF        shift and go to state 7
+    CLOSEHREF       shift and go to state 8
+    OPENDATA        shift and go to state 9
+    CLOSEDATA       shift and go to state 10
+    OPENROW         shift and go to state 11
+    CLOSEROW        shift and go to state 12
+    OPENHEADER      shift and go to state 13
+    CLOSEHEADER     shift and go to state 14
+    OPENABBR        shift and go to state 15
+    CLOSEABBR       shift and go to state 16
+    OPENTABLE       shift and go to state 4
+    CLOSETABLE      shift and go to state 5
+    BEGINTABLE      reduce using rule 16 (bskip -> .)
+
+    bskip                          shift and go to state 20
+
+state 7
+
+    (4) bskip -> OPENHREF . bskip
+    (3) bskip -> . CONTENT bskip
+    (4) bskip -> . OPENHREF bskip
+    (5) bskip -> . CLOSEHREF bskip
+    (6) bskip -> . OPENDATA bskip
+    (7) bskip -> . CLOSEDATA bskip
+    (8) bskip -> . OPENROW bskip
+    (9) bskip -> . CLOSEROW bskip
+    (10) bskip -> . OPENHEADER bskip
+    (11) bskip -> . CLOSEHEADER bskip
+    (12) bskip -> . OPENABBR bskip
+    (13) bskip -> . CLOSEABBR bskip
+    (14) bskip -> . OPENTABLE bskip
+    (15) bskip -> . CLOSETABLE bskip
+    (16) bskip -> .
+
+    CONTENT         shift and go to state 6
+    OPENHREF        shift and go to state 7
+    CLOSEHREF       shift and go to state 8
+    OPENDATA        shift and go to state 9
+    CLOSEDATA       shift and go to state 10
+    OPENROW         shift and go to state 11
+    CLOSEROW        shift and go to state 12
+    OPENHEADER      shift and go to state 13
+    CLOSEHEADER     shift and go to state 14
+    OPENABBR        shift and go to state 15
+    CLOSEABBR       shift and go to state 16
+    OPENTABLE       shift and go to state 4
+    CLOSETABLE      shift and go to state 5
+    BEGINTABLE      reduce using rule 16 (bskip -> .)
+
+    bskip                          shift and go to state 21
+
+state 8
+
+    (5) bskip -> CLOSEHREF . bskip
+    (3) bskip -> . CONTENT bskip
+    (4) bskip -> . OPENHREF bskip
+    (5) bskip -> . CLOSEHREF bskip
+    (6) bskip -> . OPENDATA bskip
+    (7) bskip -> . CLOSEDATA bskip
+    (8) bskip -> . OPENROW bskip
+    (9) bskip -> . CLOSEROW bskip
+    (10) bskip -> . OPENHEADER bskip
+    (11) bskip -> . CLOSEHEADER bskip
+    (12) bskip -> . OPENABBR bskip
+    (13) bskip -> . CLOSEABBR bskip
+    (14) bskip -> . OPENTABLE bskip
+    (15) bskip -> . CLOSETABLE bskip
+    (16) bskip -> .
+
+    CONTENT         shift and go to state 6
+    OPENHREF        shift and go to state 7
+    CLOSEHREF       shift and go to state 8
+    OPENDATA        shift and go to state 9
+    CLOSEDATA       shift and go to state 10
+    OPENROW         shift and go to state 11
+    CLOSEROW        shift and go to state 12
+    OPENHEADER      shift and go to state 13
+    CLOSEHEADER     shift and go to state 14
+    OPENABBR        shift and go to state 15
+    CLOSEABBR       shift and go to state 16
+    OPENTABLE       shift and go to state 4
+    CLOSETABLE      shift and go to state 5
+    BEGINTABLE      reduce using rule 16 (bskip -> .)
+
+    bskip                          shift and go to state 22
+
+state 9
+
+    (6) bskip -> OPENDATA . bskip
+    (3) bskip -> . CONTENT bskip
+    (4) bskip -> . OPENHREF bskip
+    (5) bskip -> . CLOSEHREF bskip
+    (6) bskip -> . OPENDATA bskip
+    (7) bskip -> . CLOSEDATA bskip
+    (8) bskip -> . OPENROW bskip
+    (9) bskip -> . CLOSEROW bskip
+    (10) bskip -> . OPENHEADER bskip
+    (11) bskip -> . CLOSEHEADER bskip
+    (12) bskip -> . OPENABBR bskip
+    (13) bskip -> . CLOSEABBR bskip
+    (14) bskip -> . OPENTABLE bskip
+    (15) bskip -> . CLOSETABLE bskip
+    (16) bskip -> .
+
+    CONTENT         shift and go to state 6
+    OPENHREF        shift and go to state 7
+    CLOSEHREF       shift and go to state 8
+    OPENDATA        shift and go to state 9
+    CLOSEDATA       shift and go to state 10
+    OPENROW         shift and go to state 11
+    CLOSEROW        shift and go to state 12
+    OPENHEADER      shift and go to state 13
+    CLOSEHEADER     shift and go to state 14
+    OPENABBR        shift and go to state 15
+    CLOSEABBR       shift and go to state 16
+    OPENTABLE       shift and go to state 4
+    CLOSETABLE      shift and go to state 5
+    BEGINTABLE      reduce using rule 16 (bskip -> .)
+
+    bskip                          shift and go to state 23
+
+state 10
+
+    (7) bskip -> CLOSEDATA . bskip
+    (3) bskip -> . CONTENT bskip
+    (4) bskip -> . OPENHREF bskip
+    (5) bskip -> . CLOSEHREF bskip
+    (6) bskip -> . OPENDATA bskip
+    (7) bskip -> . CLOSEDATA bskip
+    (8) bskip -> . OPENROW bskip
+    (9) bskip -> . CLOSEROW bskip
+    (10) bskip -> . OPENHEADER bskip
+    (11) bskip -> . CLOSEHEADER bskip
+    (12) bskip -> . OPENABBR bskip
+    (13) bskip -> . CLOSEABBR bskip
+    (14) bskip -> . OPENTABLE bskip
+    (15) bskip -> . CLOSETABLE bskip
+    (16) bskip -> .
+
+    CONTENT         shift and go to state 6
+    OPENHREF        shift and go to state 7
+    CLOSEHREF       shift and go to state 8
+    OPENDATA        shift and go to state 9
+    CLOSEDATA       shift and go to state 10
+    OPENROW         shift and go to state 11
+    CLOSEROW        shift and go to state 12
+    OPENHEADER      shift and go to state 13
+    CLOSEHEADER     shift and go to state 14
+    OPENABBR        shift and go to state 15
+    CLOSEABBR       shift and go to state 16
+    OPENTABLE       shift and go to state 4
+    CLOSETABLE      shift and go to state 5
+    BEGINTABLE      reduce using rule 16 (bskip -> .)
+
+    bskip                          shift and go to state 24
+
+state 11
+
+    (8) bskip -> OPENROW . bskip
+    (3) bskip -> . CONTENT bskip
+    (4) bskip -> . OPENHREF bskip
+    (5) bskip -> . CLOSEHREF bskip
+    (6) bskip -> . OPENDATA bskip
+    (7) bskip -> . CLOSEDATA bskip
+    (8) bskip -> . OPENROW bskip
+    (9) bskip -> . CLOSEROW bskip
+    (10) bskip -> . OPENHEADER bskip
+    (11) bskip -> . CLOSEHEADER bskip
+    (12) bskip -> . OPENABBR bskip
+    (13) bskip -> . CLOSEABBR bskip
+    (14) bskip -> . OPENTABLE bskip
+    (15) bskip -> . CLOSETABLE bskip
+    (16) bskip -> .
+
+    CONTENT         shift and go to state 6
+    OPENHREF        shift and go to state 7
+    CLOSEHREF       shift and go to state 8
+    OPENDATA        shift and go to state 9
+    CLOSEDATA       shift and go to state 10
+    OPENROW         shift and go to state 11
+    CLOSEROW        shift and go to state 12
+    OPENHEADER      shift and go to state 13
+    CLOSEHEADER     shift and go to state 14
+    OPENABBR        shift and go to state 15
+    CLOSEABBR       shift and go to state 16
+    OPENTABLE       shift and go to state 4
+    CLOSETABLE      shift and go to state 5
+    BEGINTABLE      reduce using rule 16 (bskip -> .)
+
+    bskip                          shift and go to state 25
+
+state 12
+
+    (9) bskip -> CLOSEROW . bskip
+    (3) bskip -> . CONTENT bskip
+    (4) bskip -> . OPENHREF bskip
+    (5) bskip -> . CLOSEHREF bskip
+    (6) bskip -> . OPENDATA bskip
+    (7) bskip -> . CLOSEDATA bskip
+    (8) bskip -> . OPENROW bskip
+    (9) bskip -> . CLOSEROW bskip
+    (10) bskip -> . OPENHEADER bskip
+    (11) bskip -> . CLOSEHEADER bskip
+    (12) bskip -> . OPENABBR bskip
+    (13) bskip -> . CLOSEABBR bskip
+    (14) bskip -> . OPENTABLE bskip
+    (15) bskip -> . CLOSETABLE bskip
+    (16) bskip -> .
+
+    CONTENT         shift and go to state 6
+    OPENHREF        shift and go to state 7
+    CLOSEHREF       shift and go to state 8
+    OPENDATA        shift and go to state 9
+    CLOSEDATA       shift and go to state 10
+    OPENROW         shift and go to state 11
+    CLOSEROW        shift and go to state 12
+    OPENHEADER      shift and go to state 13
+    CLOSEHEADER     shift and go to state 14
+    OPENABBR        shift and go to state 15
+    CLOSEABBR       shift and go to state 16
+    OPENTABLE       shift and go to state 4
+    CLOSETABLE      shift and go to state 5
+    BEGINTABLE      reduce using rule 16 (bskip -> .)
+
+    bskip                          shift and go to state 26
+
+state 13
+
+    (10) bskip -> OPENHEADER . bskip
+    (3) bskip -> . CONTENT bskip
+    (4) bskip -> . OPENHREF bskip
+    (5) bskip -> . CLOSEHREF bskip
+    (6) bskip -> . OPENDATA bskip
+    (7) bskip -> . CLOSEDATA bskip
+    (8) bskip -> . OPENROW bskip
+    (9) bskip -> . CLOSEROW bskip
+    (10) bskip -> . OPENHEADER bskip
+    (11) bskip -> . CLOSEHEADER bskip
+    (12) bskip -> . OPENABBR bskip
+    (13) bskip -> . CLOSEABBR bskip
+    (14) bskip -> . OPENTABLE bskip
+    (15) bskip -> . CLOSETABLE bskip
+    (16) bskip -> .
+
+    CONTENT         shift and go to state 6
+    OPENHREF        shift and go to state 7
+    CLOSEHREF       shift and go to state 8
+    OPENDATA        shift and go to state 9
+    CLOSEDATA       shift and go to state 10
+    OPENROW         shift and go to state 11
+    CLOSEROW        shift and go to state 12
+    OPENHEADER      shift and go to state 13
+    CLOSEHEADER     shift and go to state 14
+    OPENABBR        shift and go to state 15
+    CLOSEABBR       shift and go to state 16
+    OPENTABLE       shift and go to state 4
+    CLOSETABLE      shift and go to state 5
+    BEGINTABLE      reduce using rule 16 (bskip -> .)
+
+    bskip                          shift and go to state 27
+
+state 14
+
+    (11) bskip -> CLOSEHEADER . bskip
+    (3) bskip -> . CONTENT bskip
+    (4) bskip -> . OPENHREF bskip
+    (5) bskip -> . CLOSEHREF bskip
+    (6) bskip -> . OPENDATA bskip
+    (7) bskip -> . CLOSEDATA bskip
+    (8) bskip -> . OPENROW bskip
+    (9) bskip -> . CLOSEROW bskip
+    (10) bskip -> . OPENHEADER bskip
+    (11) bskip -> . CLOSEHEADER bskip
+    (12) bskip -> . OPENABBR bskip
+    (13) bskip -> . CLOSEABBR bskip
+    (14) bskip -> . OPENTABLE bskip
+    (15) bskip -> . CLOSETABLE bskip
+    (16) bskip -> .
+
+    CONTENT         shift and go to state 6
+    OPENHREF        shift and go to state 7
+    CLOSEHREF       shift and go to state 8
+    OPENDATA        shift and go to state 9
+    CLOSEDATA       shift and go to state 10
+    OPENROW         shift and go to state 11
+    CLOSEROW        shift and go to state 12
+    OPENHEADER      shift and go to state 13
+    CLOSEHEADER     shift and go to state 14
+    OPENABBR        shift and go to state 15
+    CLOSEABBR       shift and go to state 16
+    OPENTABLE       shift and go to state 4
+    CLOSETABLE      shift and go to state 5
+    BEGINTABLE      reduce using rule 16 (bskip -> .)
+
+    bskip                          shift and go to state 28
+
+state 15
+
+    (12) bskip -> OPENABBR . bskip
+    (3) bskip -> . CONTENT bskip
+    (4) bskip -> . OPENHREF bskip
+    (5) bskip -> . CLOSEHREF bskip
+    (6) bskip -> . OPENDATA bskip
+    (7) bskip -> . CLOSEDATA bskip
+    (8) bskip -> . OPENROW bskip
+    (9) bskip -> . CLOSEROW bskip
+    (10) bskip -> . OPENHEADER bskip
+    (11) bskip -> . CLOSEHEADER bskip
+    (12) bskip -> . OPENABBR bskip
+    (13) bskip -> . CLOSEABBR bskip
+    (14) bskip -> . OPENTABLE bskip
+    (15) bskip -> . CLOSETABLE bskip
+    (16) bskip -> .
+
+    CONTENT         shift and go to state 6
+    OPENHREF        shift and go to state 7
+    CLOSEHREF       shift and go to state 8
+    OPENDATA        shift and go to state 9
+    CLOSEDATA       shift and go to state 10
+    OPENROW         shift and go to state 11
+    CLOSEROW        shift and go to state 12
+    OPENHEADER      shift and go to state 13
+    CLOSEHEADER     shift and go to state 14
+    OPENABBR        shift and go to state 15
+    CLOSEABBR       shift and go to state 16
+    OPENTABLE       shift and go to state 4
+    CLOSETABLE      shift and go to state 5
+    BEGINTABLE      reduce using rule 16 (bskip -> .)
+
+    bskip                          shift and go to state 29
+
+state 16
+
+    (13) bskip -> CLOSEABBR . bskip
+    (3) bskip -> . CONTENT bskip
+    (4) bskip -> . OPENHREF bskip
+    (5) bskip -> . CLOSEHREF bskip
+    (6) bskip -> . OPENDATA bskip
+    (7) bskip -> . CLOSEDATA bskip
+    (8) bskip -> . OPENROW bskip
+    (9) bskip -> . CLOSEROW bskip
+    (10) bskip -> . OPENHEADER bskip
+    (11) bskip -> . CLOSEHEADER bskip
+    (12) bskip -> . OPENABBR bskip
+    (13) bskip -> . CLOSEABBR bskip
+    (14) bskip -> . OPENTABLE bskip
+    (15) bskip -> . CLOSETABLE bskip
+    (16) bskip -> .
+
+    CONTENT         shift and go to state 6
+    OPENHREF        shift and go to state 7
+    CLOSEHREF       shift and go to state 8
+    OPENDATA        shift and go to state 9
+    CLOSEDATA       shift and go to state 10
+    OPENROW         shift and go to state 11
+    CLOSEROW        shift and go to state 12
+    OPENHEADER      shift and go to state 13
+    CLOSEHEADER     shift and go to state 14
+    OPENABBR        shift and go to state 15
+    CLOSEABBR       shift and go to state 16
+    OPENTABLE       shift and go to state 4
+    CLOSETABLE      shift and go to state 5
+    BEGINTABLE      reduce using rule 16 (bskip -> .)
+
+    bskip                          shift and go to state 30
+
+state 17
+
+    (2) start -> bskip BEGINTABLE . skip OPENTABLE handleRow CLOSETABLE
+    (23) skip -> . CONTENT skip
+    (24) skip -> . OPENHREF skip
+    (25) skip -> . CLOSEHREF skip
+    (26) skip -> .
+
+    CONTENT         shift and go to state 32
+    OPENHREF        shift and go to state 33
+    CLOSEHREF       shift and go to state 34
+    OPENTABLE       reduce using rule 26 (skip -> .)
+
+    skip                           shift and go to state 31
+
+state 18
+
+    (14) bskip -> OPENTABLE bskip .
+
+    BEGINTABLE      reduce using rule 14 (bskip -> OPENTABLE bskip .)
+
+
+state 19
+
+    (15) bskip -> CLOSETABLE bskip .
+
+    BEGINTABLE      reduce using rule 15 (bskip -> CLOSETABLE bskip .)
+
+
+state 20
+
+    (3) bskip -> CONTENT bskip .
+
+    BEGINTABLE      reduce using rule 3 (bskip -> CONTENT bskip .)
+
+
+state 21
+
+    (4) bskip -> OPENHREF bskip .
+
+    BEGINTABLE      reduce using rule 4 (bskip -> OPENHREF bskip .)
+
+
+state 22
+
+    (5) bskip -> CLOSEHREF bskip .
+
+    BEGINTABLE      reduce using rule 5 (bskip -> CLOSEHREF bskip .)
+
+
+state 23
+
+    (6) bskip -> OPENDATA bskip .
+
+    BEGINTABLE      reduce using rule 6 (bskip -> OPENDATA bskip .)
+
+
+state 24
+
+    (7) bskip -> CLOSEDATA bskip .
+
+    BEGINTABLE      reduce using rule 7 (bskip -> CLOSEDATA bskip .)
+
+
+state 25
+
+    (8) bskip -> OPENROW bskip .
+
+    BEGINTABLE      reduce using rule 8 (bskip -> OPENROW bskip .)
+
+
+state 26
+
+    (9) bskip -> CLOSEROW bskip .
+
+    BEGINTABLE      reduce using rule 9 (bskip -> CLOSEROW bskip .)
+
+
+state 27
+
+    (10) bskip -> OPENHEADER bskip .
+
+    BEGINTABLE      reduce using rule 10 (bskip -> OPENHEADER bskip .)
+
+
+state 28
+
+    (11) bskip -> CLOSEHEADER bskip .
+
+    BEGINTABLE      reduce using rule 11 (bskip -> CLOSEHEADER bskip .)
+
+
+state 29
+
+    (12) bskip -> OPENABBR bskip .
+
+    BEGINTABLE      reduce using rule 12 (bskip -> OPENABBR bskip .)
+
+
+state 30
+
+    (13) bskip -> CLOSEABBR bskip .
+
+    BEGINTABLE      reduce using rule 13 (bskip -> CLOSEABBR bskip .)
+
+
+state 31
+
+    (2) start -> bskip BEGINTABLE skip . OPENTABLE handleRow CLOSETABLE
+
+    OPENTABLE       shift and go to state 35
+
+
+state 32
+
+    (23) skip -> CONTENT . skip
+    (23) skip -> . CONTENT skip
+    (24) skip -> . OPENHREF skip
+    (25) skip -> . CLOSEHREF skip
+    (26) skip -> .
+
+    CONTENT         shift and go to state 32
+    OPENHREF        shift and go to state 33
+    CLOSEHREF       shift and go to state 34
+    OPENTABLE       reduce using rule 26 (skip -> .)
+    CLOSEDATA       reduce using rule 26 (skip -> .)
+    CLOSEHEADER     reduce using rule 26 (skip -> .)
+
+    skip                           shift and go to state 36
+
+state 33
+
+    (24) skip -> OPENHREF . skip
+    (23) skip -> . CONTENT skip
+    (24) skip -> . OPENHREF skip
+    (25) skip -> . CLOSEHREF skip
+    (26) skip -> .
+
+    CONTENT         shift and go to state 32
+    OPENHREF        shift and go to state 33
+    CLOSEHREF       shift and go to state 34
+    OPENTABLE       reduce using rule 26 (skip -> .)
+    CLOSEDATA       reduce using rule 26 (skip -> .)
+    CLOSEHEADER     reduce using rule 26 (skip -> .)
+
+    skip                           shift and go to state 37
+
+state 34
+
+    (25) skip -> CLOSEHREF . skip
+    (23) skip -> . CONTENT skip
+    (24) skip -> . OPENHREF skip
+    (25) skip -> . CLOSEHREF skip
+    (26) skip -> .
+
+    CONTENT         shift and go to state 32
+    OPENHREF        shift and go to state 33
+    CLOSEHREF       shift and go to state 34
+    OPENTABLE       reduce using rule 26 (skip -> .)
+    CLOSEDATA       reduce using rule 26 (skip -> .)
+    CLOSEHEADER     reduce using rule 26 (skip -> .)
+
+    skip                           shift and go to state 38
+
+state 35
+
+    (2) start -> bskip BEGINTABLE skip OPENTABLE . handleRow CLOSETABLE
+    (17) handleRow -> . OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+    (18) handleRow -> . OPENROW handleData CLOSEROW handleRow
+    (19) handleRow -> .
+
+    OPENROW         shift and go to state 40
+    CLOSETABLE      reduce using rule 19 (handleRow -> .)
+
+    handleRow                      shift and go to state 39
+
+state 36
+
+    (23) skip -> CONTENT skip .
+
+    OPENTABLE       reduce using rule 23 (skip -> CONTENT skip .)
+    CLOSEDATA       reduce using rule 23 (skip -> CONTENT skip .)
+    CLOSEHEADER     reduce using rule 23 (skip -> CONTENT skip .)
+
+
+state 37
+
+    (24) skip -> OPENHREF skip .
+
+    OPENTABLE       reduce using rule 24 (skip -> OPENHREF skip .)
+    CLOSEDATA       reduce using rule 24 (skip -> OPENHREF skip .)
+    CLOSEHEADER     reduce using rule 24 (skip -> OPENHREF skip .)
+
+
+state 38
+
+    (25) skip -> CLOSEHREF skip .
+
+    OPENTABLE       reduce using rule 25 (skip -> CLOSEHREF skip .)
+    CLOSEDATA       reduce using rule 25 (skip -> CLOSEHREF skip .)
+    CLOSEHEADER     reduce using rule 25 (skip -> CLOSEHREF skip .)
+
+
+state 39
+
+    (2) start -> bskip BEGINTABLE skip OPENTABLE handleRow . CLOSETABLE
+
+    CLOSETABLE      shift and go to state 41
+
+
+state 40
+
+    (17) handleRow -> OPENROW . OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+    (18) handleRow -> OPENROW . handleData CLOSEROW handleRow
+    (20) handleData -> . OPENDATA skip CLOSEDATA OPENDATA skip CLOSEDATA OPENHEADER OPENHREF CONTENT CLOSEHREF skip CLOSEHEADER handleData
+    (21) handleData -> . OPENDATA skip CLOSEDATA handleData
+    (22) handleData -> .
+
+    OPENHEADER      shift and go to state 42
+    OPENDATA        shift and go to state 44
+    CLOSEROW        reduce using rule 22 (handleData -> .)
+
+    handleData                     shift and go to state 43
+
+state 41
+
+    (2) start -> bskip BEGINTABLE skip OPENTABLE handleRow CLOSETABLE .
+
+    $end            reduce using rule 2 (start -> bskip BEGINTABLE skip OPENTABLE handleRow CLOSETABLE .)
+
+
+state 42
+
+    (17) handleRow -> OPENROW OPENHEADER . CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+
+    CONTENT         shift and go to state 45
+
+
+state 43
+
+    (18) handleRow -> OPENROW handleData . CLOSEROW handleRow
+
+    CLOSEROW        shift and go to state 46
+
+
+state 44
+
+    (20) handleData -> OPENDATA . skip CLOSEDATA OPENDATA skip CLOSEDATA OPENHEADER OPENHREF CONTENT CLOSEHREF skip CLOSEHEADER handleData
+    (21) handleData -> OPENDATA . skip CLOSEDATA handleData
+    (23) skip -> . CONTENT skip
+    (24) skip -> . OPENHREF skip
+    (25) skip -> . CLOSEHREF skip
+    (26) skip -> .
+
+    CONTENT         shift and go to state 32
+    OPENHREF        shift and go to state 33
+    CLOSEHREF       shift and go to state 34
+    CLOSEDATA       reduce using rule 26 (skip -> .)
+
+    skip                           shift and go to state 47
+
+state 45
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT . CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+
+    CLOSEHEADER     shift and go to state 48
+
+
+state 46
+
+    (18) handleRow -> OPENROW handleData CLOSEROW . handleRow
+    (17) handleRow -> . OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+    (18) handleRow -> . OPENROW handleData CLOSEROW handleRow
+    (19) handleRow -> .
+
+    OPENROW         shift and go to state 40
+    CLOSETABLE      reduce using rule 19 (handleRow -> .)
+
+    handleRow                      shift and go to state 49
+
+state 47
+
+    (20) handleData -> OPENDATA skip . CLOSEDATA OPENDATA skip CLOSEDATA OPENHEADER OPENHREF CONTENT CLOSEHREF skip CLOSEHEADER handleData
+    (21) handleData -> OPENDATA skip . CLOSEDATA handleData
+
+    CLOSEDATA       shift and go to state 50
+
+
+state 48
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER . OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+
+    OPENHEADER      shift and go to state 51
+
+
+state 49
+
+    (18) handleRow -> OPENROW handleData CLOSEROW handleRow .
+
+    CLOSETABLE      reduce using rule 18 (handleRow -> OPENROW handleData CLOSEROW handleRow .)
+
+
+state 50
+
+    (20) handleData -> OPENDATA skip CLOSEDATA . OPENDATA skip CLOSEDATA OPENHEADER OPENHREF CONTENT CLOSEHREF skip CLOSEHEADER handleData
+    (21) handleData -> OPENDATA skip CLOSEDATA . handleData
+    (20) handleData -> . OPENDATA skip CLOSEDATA OPENDATA skip CLOSEDATA OPENHEADER OPENHREF CONTENT CLOSEHREF skip CLOSEHEADER handleData
+    (21) handleData -> . OPENDATA skip CLOSEDATA handleData
+    (22) handleData -> .
+
+    OPENDATA        shift and go to state 52
+    CLOSEROW        reduce using rule 22 (handleData -> .)
+
+    handleData                     shift and go to state 53
+
+state 51
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER . CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+
+    CONTENT         shift and go to state 54
+
+
+state 52
+
+    (20) handleData -> OPENDATA skip CLOSEDATA OPENDATA . skip CLOSEDATA OPENHEADER OPENHREF CONTENT CLOSEHREF skip CLOSEHEADER handleData
+    (20) handleData -> OPENDATA . skip CLOSEDATA OPENDATA skip CLOSEDATA OPENHEADER OPENHREF CONTENT CLOSEHREF skip CLOSEHEADER handleData
+    (21) handleData -> OPENDATA . skip CLOSEDATA handleData
+    (23) skip -> . CONTENT skip
+    (24) skip -> . OPENHREF skip
+    (25) skip -> . CLOSEHREF skip
+    (26) skip -> .
+
+    CONTENT         shift and go to state 32
+    OPENHREF        shift and go to state 33
+    CLOSEHREF       shift and go to state 34
+    CLOSEDATA       reduce using rule 26 (skip -> .)
+
+    skip                           shift and go to state 55
+
+state 53
+
+    (21) handleData -> OPENDATA skip CLOSEDATA handleData .
+
+    CLOSEROW        reduce using rule 21 (handleData -> OPENDATA skip CLOSEDATA handleData .)
+
+
+state 54
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT . CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+
+    CLOSEHEADER     shift and go to state 56
+
+
+state 55
+
+    (20) handleData -> OPENDATA skip CLOSEDATA OPENDATA skip . CLOSEDATA OPENHEADER OPENHREF CONTENT CLOSEHREF skip CLOSEHEADER handleData
+    (20) handleData -> OPENDATA skip . CLOSEDATA OPENDATA skip CLOSEDATA OPENHEADER OPENHREF CONTENT CLOSEHREF skip CLOSEHEADER handleData
+    (21) handleData -> OPENDATA skip . CLOSEDATA handleData
+
+    CLOSEDATA       shift and go to state 57
+
+
+state 56
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER . OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+
+    OPENHEADER      shift and go to state 58
+
+
+state 57
+
+    (20) handleData -> OPENDATA skip CLOSEDATA OPENDATA skip CLOSEDATA . OPENHEADER OPENHREF CONTENT CLOSEHREF skip CLOSEHEADER handleData
+    (20) handleData -> OPENDATA skip CLOSEDATA . OPENDATA skip CLOSEDATA OPENHEADER OPENHREF CONTENT CLOSEHREF skip CLOSEHEADER handleData
+    (21) handleData -> OPENDATA skip CLOSEDATA . handleData
+    (20) handleData -> . OPENDATA skip CLOSEDATA OPENDATA skip CLOSEDATA OPENHEADER OPENHREF CONTENT CLOSEHREF skip CLOSEHEADER handleData
+    (21) handleData -> . OPENDATA skip CLOSEDATA handleData
+    (22) handleData -> .
+
+    OPENHEADER      shift and go to state 59
+    OPENDATA        shift and go to state 52
+    CLOSEROW        reduce using rule 22 (handleData -> .)
+
+    handleData                     shift and go to state 53
+
+state 58
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER . CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+
+    CONTENT         shift and go to state 60
+
+
+state 59
+
+    (20) handleData -> OPENDATA skip CLOSEDATA OPENDATA skip CLOSEDATA OPENHEADER . OPENHREF CONTENT CLOSEHREF skip CLOSEHEADER handleData
+
+    OPENHREF        shift and go to state 61
+
+
+state 60
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT . CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+
+    CLOSEHEADER     shift and go to state 62
+
+
+state 61
+
+    (20) handleData -> OPENDATA skip CLOSEDATA OPENDATA skip CLOSEDATA OPENHEADER OPENHREF . CONTENT CLOSEHREF skip CLOSEHEADER handleData
+
+    CONTENT         shift and go to state 63
+
+
+state 62
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER . OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+
+    OPENHEADER      shift and go to state 64
+
+
+state 63
+
+    (20) handleData -> OPENDATA skip CLOSEDATA OPENDATA skip CLOSEDATA OPENHEADER OPENHREF CONTENT . CLOSEHREF skip CLOSEHEADER handleData
+
+    CLOSEHREF       shift and go to state 65
+
+
+state 64
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER . CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+
+    CONTENT         shift and go to state 66
+
+
+state 65
+
+    (20) handleData -> OPENDATA skip CLOSEDATA OPENDATA skip CLOSEDATA OPENHEADER OPENHREF CONTENT CLOSEHREF . skip CLOSEHEADER handleData
+    (23) skip -> . CONTENT skip
+    (24) skip -> . OPENHREF skip
+    (25) skip -> . CLOSEHREF skip
+    (26) skip -> .
+
+    CONTENT         shift and go to state 32
+    OPENHREF        shift and go to state 33
+    CLOSEHREF       shift and go to state 34
+    CLOSEHEADER     reduce using rule 26 (skip -> .)
+
+    skip                           shift and go to state 67
+
+state 66
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT . skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+    (23) skip -> . CONTENT skip
+    (24) skip -> . OPENHREF skip
+    (25) skip -> . CLOSEHREF skip
+    (26) skip -> .
+
+    CONTENT         shift and go to state 32
+    OPENHREF        shift and go to state 33
+    CLOSEHREF       shift and go to state 34
+    CLOSEHEADER     reduce using rule 26 (skip -> .)
+
+    skip                           shift and go to state 68
+
+state 67
+
+    (20) handleData -> OPENDATA skip CLOSEDATA OPENDATA skip CLOSEDATA OPENHEADER OPENHREF CONTENT CLOSEHREF skip . CLOSEHEADER handleData
+
+    CLOSEHEADER     shift and go to state 69
+
+
+state 68
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip . CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+
+    CLOSEHEADER     shift and go to state 70
+
+
+state 69
+
+    (20) handleData -> OPENDATA skip CLOSEDATA OPENDATA skip CLOSEDATA OPENHEADER OPENHREF CONTENT CLOSEHREF skip CLOSEHEADER . handleData
+    (20) handleData -> . OPENDATA skip CLOSEDATA OPENDATA skip CLOSEDATA OPENHEADER OPENHREF CONTENT CLOSEHREF skip CLOSEHEADER handleData
+    (21) handleData -> . OPENDATA skip CLOSEDATA handleData
+    (22) handleData -> .
+
+    OPENDATA        shift and go to state 44
+    CLOSEROW        reduce using rule 22 (handleData -> .)
+
+    handleData                     shift and go to state 71
+
+state 70
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER . OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+
+    OPENHEADER      shift and go to state 72
+
+
+state 71
+
+    (20) handleData -> OPENDATA skip CLOSEDATA OPENDATA skip CLOSEDATA OPENHEADER OPENHREF CONTENT CLOSEHREF skip CLOSEHEADER handleData .
+
+    CLOSEROW        reduce using rule 20 (handleData -> OPENDATA skip CLOSEDATA OPENDATA skip CLOSEDATA OPENHEADER OPENHREF CONTENT CLOSEHREF skip CLOSEHEADER handleData .)
+
+
+state 72
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER . CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+
+    CONTENT         shift and go to state 73
+
+
+state 73
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT . CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+
+    CLOSEHEADER     shift and go to state 74
+
+
+state 74
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER . OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+
+    OPENHEADER      shift and go to state 75
+
+
+state 75
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER . CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+
+    CONTENT         shift and go to state 76
+
+
+state 76
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT . CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+
+    CLOSEHEADER     shift and go to state 77
+
+
+state 77
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER . OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+
+    OPENHEADER      shift and go to state 78
+
+
+state 78
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER . CONTENT CLOSEHEADER CLOSEROW handleRow
+
+    CONTENT         shift and go to state 79
+
+
+state 79
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT . CLOSEHEADER CLOSEROW handleRow
+
+    CLOSEHEADER     shift and go to state 80
+
+
+state 80
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER . CLOSEROW handleRow
+
+    CLOSEROW        shift and go to state 81
+
+
+state 81
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW . handleRow
+    (17) handleRow -> . OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow
+    (18) handleRow -> . OPENROW handleData CLOSEROW handleRow
+    (19) handleRow -> .
+
+    OPENROW         shift and go to state 40
+    CLOSETABLE      reduce using rule 19 (handleRow -> .)
+
+    handleRow                      shift and go to state 82
+
+state 82
+
+    (17) handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow .
+
+    CLOSETABLE      reduce using rule 17 (handleRow -> OPENROW OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT skip CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER OPENHEADER CONTENT CLOSEHEADER CLOSEROW handleRow .)
+

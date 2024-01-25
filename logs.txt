@@ -1,0 +1,224 @@
+Teams advanced to knockout stage:	 NetherlandsSenegalGoals forwarded and conceded:Netherlands 5 1Senegal 5 4Ecuador 4 3Qatar 1 7Teams advanced to knockout stage:	 EnglandUnited States
+Goals forwarded and conceded:Argentina 5 2
+Poland 2 2
+Mexico 2 3
+Saudi Arabia 3 5
+Match details:	France4�1Australia  Mbapp�GiroudRabiotGoodwin  Al Janoub Stadium, Al WakrahAttendance: 40,875Referee: Victor Gomes
+Teams advanced to knockout stage:	 JapanSpain
+Teams advanced to knockout stage:	 MoroccoCroatia
+Teams advanced to knockout stage:	 BrazilSwitzerland
+Teams advanced to knockout stage:	 PortugalSouth Korea
+Argentina
+Australia
+Belgium
+Brazil
+Cameroon
+Lusail
+Canada
+Costa Rica
+Croatia
+Denmark
+Ecuador
+Tivoli
+England
+France
+Germany
+Ghana
+Iran
+Japan
+Mexico
+Morocco
+Netherlands
+Poland
+Portugal
+Qatar
+Saudi Arabia
+Senegal
+Serbia
+South Korea
+Spain
+Switzerland
+Tunisia
+United States
+Uruguay
+Wales
+Choice 1 For team name
+Argentina
+Australia
+Belgium
+Brazil
+Cameroon
+Lusail
+Canada
+Costa Rica
+Croatia
+Denmark
+Ecuador
+Tivoli
+England
+France
+Germany
+Ghana
+Iran
+Japan
+Mexico
+Morocco
+Netherlands
+Poland
+Portugal
+Qatar
+Saudi Arabia
+Senegal
+Serbia
+South Korea
+Spain
+Switzerland
+Tunisia
+United States
+Uruguay
+Wales
+Choice 1 For team name
+Lusail Stadium,88,966
+Al Bayt Stadium,68,895
+Khalifa International Stadium,45,857
+Ahmad bin Ali Stadium,45,032
+Education City Stadium,44,667
+Al Thumama Stadium,44,400
+Stadium 974,44,089
+Al Janoub Stadium,44,325
+Lusail Stadium,88,966
+Al Bayt Stadium,68,895
+Khalifa International Stadium,45,857
+Ahmad bin Ali Stadium,45,032
+Education City Stadium,44,667
+Al Thumama Stadium,44,400
+Stadium 974,44,089
+Al Janoub Stadium,44,325
+Teams advanced to knockout stage:	 NetherlandsSenegal
+Bronze Ball->Luka Modrić
+Silver Ball->Kylian Mbappé
+Golden Ball->Lionel Messi
+Bronze Boot->Olivier Giroud
+Silver Boot->Lionel Messi
+Golden Boot->Kylian Mbappé
+Golden Glove->Emiliano Martínez
+FIFA Young Player Award->Enzo Fernández
+FIFA Fair Play Trophy->EnglandJordan Pickford
+Nick Pope
+Aaron Ramsdale
+Kyle Walker
+Luke Shaw
+John Stones
+Harry Maguire
+Kieran Trippier
+Eric Dier
+Conor Coady
+Trent Alexander-Arnold
+Declan Rice
+Jordan Henderson
+Kalvin Phillips
+Mason Mount
+Jude Bellingham
+Conor Gallagher
+Jack Grealish
+Harry Kane
+Raheem Sterling
+Marcus Rashford
+Bukayo Saka
+Phil Foden
+Callum Wilson
+James Maddison
+EnglandvsIran
+EnglandvsUnited States
+WalesvsEngland
+EnglandvsSenegal
+EnglandvsFrance
+Argentina
+Australia
+Belgium
+Brazil
+Cameroon
+Lusail
+Canada
+Costa Rica
+Croatia
+Denmark
+Ecuador
+Tivoli
+England
+France
+Germany
+Ghana
+Iran
+Japan
+Mexico
+Morocco
+Netherlands
+Poland
+Portugal
+Qatar
+Saudi Arabia
+Senegal
+Serbia
+South Korea
+Spain
+Switzerland
+Tunisia
+United States
+Uruguay
+Wales
+Lusail Stadium,88,966
+Al Bayt Stadium,68,895
+Khalifa International Stadium,45,857
+Ahmad bin Ali Stadium,45,032
+Education City Stadium,44,667
+Al Thumama Stadium,44,400
+Stadium 974,44,089
+Al Janoub Stadium,44,325
+Teams advanced to knockout stage:	 EnglandUnited States
+semi
+['�lvarez', 'Messi', 'Argentina', '3�0', 'Croatia', 'Lusail Stadium', ', ', 'Lusail', 'Attendance: 88,966', 'Referee: ', 'Daniele Orsato']
+['Kolo Muani', 'T. Hernandez', 'France', '2�0', 'Morocco', 'Al Bayt Stadium', ', ', 'Al Khor', 'Attendance: 68,294', 'Referee: ', 'C�sar Arturo Ramos']
+Bronze Ball->Luka Modrić
+Silver Ball->Kylian Mbappé
+Golden Ball->Lionel Messi
+Bronze Boot->Olivier Giroud
+Silver Boot->Lionel Messi
+Golden Boot->Kylian Mbappé
+Golden Glove->Emiliano Martínez
+FIFA Young Player Award->Enzo Fernández
+FIFA Fair Play Trophy->EnglandChoice 1 For team name
+Choice 2 For Venue and capacity
+Choice 3 For Match details
+Choice 4 For KnockOut
+Choice 5 For Award
+EnglandvsIran
+EnglandvsUnited States
+WalesvsEngland
+EnglandvsSenegal
+EnglandvsFrance
+Jordan Pickford
+Nick Pope
+Aaron Ramsdale
+Kyle Walker
+Luke Shaw
+John Stones
+Harry Maguire
+Kieran Trippier
+Eric Dier
+Conor Coady
+Trent Alexander-Arnold
+Declan Rice
+Jordan Henderson
+Kalvin Phillips
+Mason Mount
+Jude Bellingham
+Conor Gallagher
+Jack Grealish
+Harry Kane
+Raheem Sterling
+Marcus Rashford
+Bukayo Saka
+Phil Foden
+Callum Wilson
+James Maddison
